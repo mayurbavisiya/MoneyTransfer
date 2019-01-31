@@ -5,18 +5,18 @@ import java.util.Date;
 
 public class Account {
 
-	private String AccountId;
+	private int AccountId;
 	private String Name;
 	private BigDecimal Balance;
 	private Date CreationDate;
 	private String BankIFSCCode;
 	private String Currency;
 
-	public String getAccountId() {
+	public int getAccountId() {
 		return AccountId;
 	}
 
-	public void setAccountId(String accountId) {
+	public void setAccountId(int accountId) {
 		AccountId = accountId;
 	}
 
@@ -58,6 +58,38 @@ public class Account {
 
 	public void setCurrency(String currency) {
 		Currency = currency;
+	}
+
+}
+
+class AccountCreate extends Account{
+
+	private String Name;
+	private BigDecimal Balance;
+	private String BankIFSCCode;
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public BigDecimal getBalance() {
+		return Balance;
+	}
+
+	public void setBalance(BigDecimal balance) {
+		Balance = balance;
+	}
+
+	public String getBankIFSCCode() {
+		return BankIFSCCode;
+	}
+
+	public void setBankIFSCCode(String bankIFSCCode) {
+		BankIFSCCode = bankIFSCCode;
 	}
 
 }
